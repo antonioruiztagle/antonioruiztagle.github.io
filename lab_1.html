@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Antonio Ruiz-Tagle</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>Antonio Ruiz-Tagle Reyes</h1>
+        <h2>Industrial Civil Engineering</h2>
+        <h2>4th year</h2>
+        <a href="https://github.com/antonioruiztagle/antonioruiztagle.github.io.git"> Repository of Antonio</a>
+        <p>Student of Civil Engineering at Universidad de los Andes</p>
+
+    </div>
+
+
+    <div class="skills-table">
+
+        <h2>Skills Table</h2>
+
+        <table>
+            <tr>
+                <th>Skill</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>HTML/CSS</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>Git</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>Excel</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>SQL</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>Ruby</td>
+                <td>Nule</td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>Basic</td>
+            </tr>
+            <tr>
+                <td>Spanish</td>
+                <td>Native</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="button-section">
+        <label for="updateText">
+            Enter the course you have taken and the current level you are at (Skill, Level): </label>
+        <input type="text" id="updateText">
+        <button onclick="updateSection()">OK</button>
+    </div>
+
+    <!-- <div class="update-section">
+        
+    </div> -->
+
+    <script>
+        function updateSection() {
+            
+            var courseInfo = document.getElementById('updateText').value;
+            var parts = courseInfo.split(',');
+
+            if (parts.length === 2) {
+                var skillName = parts[0].trim();
+                var newLevel = parts[1].trim();
+
+                
+                var table = document.querySelector('.skills-table table');
+                var rows = table.getElementsByTagName('tr');
+
+                for (var i = 1; i < rows.length; i++) {
+                    var currentSkill = rows[i].getElementsByTagName('td')[0].textContent.trim();
+
+                    if (currentSkill === skillName) {
+                        
+                        rows[i].getElementsByTagName('td')[1].textContent = newLevel;
+                        break;
+                    }
+                }
+
+                
+                document.querySelector('.update-section').innerHTML = '<p>' + courseInfo + '</p>';
+            } else {
+                alert("Please enter the information in the correct format (Skill, New Level).");
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
