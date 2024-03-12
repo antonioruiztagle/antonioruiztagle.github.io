@@ -1,32 +1,47 @@
-body { 
+
+
+body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header { 
+.header {
     background-color: rgb(194, 239, 239);
-    color:black;
-    padding: 10px;
+    color: black;
+    padding: 20px;
     border: 5px solid black;
-
-
+    text-align: center;
 }
+
+.header a {
+    color: blue;
+}
+
 .skills-table {
     background-color: rgb(83, 165, 42);
-    padding: 10px;
+    padding: 20px;
     border: 5px solid black;
     text-align: left;
+    margin-top: 20px;
 }
 
-.skills-table th, .skills-table td {
-    border: 0px solid black;
-    padding: 8px;
+.skills-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 2px solid black;
+    padding: 10px;
     text-align: center;
     background-color: aliceblue;
-
 }
 
 .skills-table th {
-background-color: aqua;
+    background-color: aqua;
 }
 
 .button-section {
@@ -41,15 +56,15 @@ background-color: aqua;
 }
 
 .button-section input {
-    padding: 8px;
+    padding: 10px;
     font-size: 16px;
 }
 
 .button-section button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 24px;
+    font-size: 18px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -72,3 +87,5 @@ background-color: aqua;
     margin: 0;
     font-size: 18px;
 }
+
+
