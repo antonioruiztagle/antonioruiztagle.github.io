@@ -61,7 +61,7 @@ body {
 }
 
 .button-section button {
-    background-color: #4CAF50;
+    background-color: green;
     color: white;
     padding: 12px 24px;
     font-size: 18px;
@@ -72,11 +72,13 @@ body {
 }
 
 .button-section button:hover {
-    background-color: #45a049;
+    background-color: green;
 }
 
-.update-section {
-    margin-top: 20px;
+ .update-section {
+    position: fixed;
+    top: 10px; /* Ajusta según sea necesario para la distancia desde la parte superior */
+    right: 10px; /* Ajusta según sea necesario para la distancia desde la derecha */
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -87,5 +89,3 @@ body {
     margin: 0;
     font-size: 18px;
 }
-
-
