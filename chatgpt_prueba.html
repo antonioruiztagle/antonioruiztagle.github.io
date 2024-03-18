@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
     <title>Antonio Ruiz-Tagle</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header {
+            color: #3366cc;
+        }
+
+        .table-container {
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .button-section {
+            margin-top: 20px;
+        }
+
+        .update-section {
+            background-color: #ffd700;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-
     <div class="header">
-
-        <h1>Antonio Ruiz-Tagle Reyes</h1>
+        <h1>Antonio Ruiz-Tagle</h1>
         <h2>Industrial Civil Engineering</h2>
         <h2>4th year</h2>
-        <a href="https://github.com/antonioruiztagle/antonioruiztagle.github.io.git"> Repository of Antonio</a>
+        <a href="https://github.com/antonioruiztagle/antonioruiztagle.github.io.git">Repository of Antonio</a>
         <p>Student of Civil Engineering at Universidad de los Andes</p>
-
     </div>
 
-
-    <div class="skills-table">
-
+    <div class="table-container">
         <h2>Skills Table</h2>
-
         <table>
             <tr>
                 <th>Skill</th>
@@ -65,33 +82,28 @@
                 <td>Spanish</td>
                 <td>Native</td>
             </tr>
-
         </table>
-
     </div>
 
     <div class="button-section">
-        <label for="updateText">Insert any text and look at the bottom right corner of the screen:</label>
+        <label for="updateText">Enter Text:</label>
         <input type="text" id="updateText">
-        <button onclick="updateSection()">OK</button>
+        <button onclick="updateSection()">Update Section</button>
     </div>
 
     <div class="update-section">
-        
+        <!-- Contenido de la sección a actualizar -->
     </div>
 
     <script>
         function updateSection() {
-            
+            // Obtiene el valor del campo de texto
             var textValue = document.getElementById('updateText').value;
 
-        
+            // Actualiza la sección con el valor ingresado
             document.querySelector('.update-section').innerHTML = '<p>' + textValue + '</p>';
         }
     </script>
-
-
-
 </body>
 
 </html>
