@@ -71,45 +71,22 @@
     </div>
 
     <div class="button-section">
-        <label for="updateText">
-            Enter the course you have taken and the current level you are at (Skill, Level): </label>
+        <label for="updateText">Insert any text and look at the bottom right corner of the screen:</label>
         <input type="text" id="updateText">
         <button onclick="updateSection()">OK</button>
     </div>
 
-    <!-- <div class="update-section">
+    <div class="update-section">
         
-    </div> -->
+    </div>
 
     <script>
         function updateSection() {
             
-            var courseInfo = document.getElementById('updateText').value;
-            var parts = courseInfo.split(',');
+            var textValue = document.getElementById('updateText').value;
 
-            if (parts.length === 2) {
-                var skillName = parts[0].trim();
-                var newLevel = parts[1].trim();
-
-                
-                var table = document.querySelector('.skills-table table');
-                var rows = table.getElementsByTagName('tr');
-
-                for (var i = 1; i < rows.length; i++) {
-                    var currentSkill = rows[i].getElementsByTagName('td')[0].textContent.trim();
-
-                    if (currentSkill === skillName) {
-                        
-                        rows[i].getElementsByTagName('td')[1].textContent = newLevel;
-                        break;
-                    }
-                }
-
-                
-                document.querySelector('.update-section').innerHTML = '<p>' + courseInfo + '</p>';
-            } else {
-                alert("Please enter the information in the correct format (Skill, New Level).");
-            }
+        
+            document.querySelector('.update-section').innerHTML = '<p>' + textValue + '</p>';
         }
     </script>
 
